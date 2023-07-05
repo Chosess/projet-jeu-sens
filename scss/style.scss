@@ -17,7 +17,6 @@ section {
     top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
-    opacity: 0.75;
 }
 
 .grid-lines {
@@ -42,3 +41,34 @@ section {
     }
 }
 
+
+.etoilefond{
+    background-image: url("../img/stars.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 58vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: tourne 15s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes tourne{
+    0%, 100%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.4;
+    }
+}
+
+
+.opacite{
+    width: 100vw;
+    height: 43vh;
+    background: linear-gradient(to bottom, rgba(65, 5, 106, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+}
