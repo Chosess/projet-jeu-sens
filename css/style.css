@@ -1,20 +1,33 @@
 body {
   margin: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
 section {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
   perspective: 800px;
-  overflow: hidden;
   background-image: linear-gradient(to top, #0f0209, #23061d, #330531, #3e024b, #41056a, #520578, #640385, #770092, #9b0089, #b8007e, #ce1173, #e03168);
 }
 
-div {
+.sun-img {
+  height: 375px;
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grid-lines {
   background-size: 50px 50px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-  height: inherit;
-  transform: rotateX(50deg);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.25) 2.5px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 2.5px, transparent 1px);
+  height: 85%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(50%) rotateX(85deg);
   transform-origin: top center;
   animation: 5s linear infinite crawlingWall;
   background-position-y: top;
