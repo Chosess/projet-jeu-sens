@@ -102,13 +102,174 @@ section {
 }
 
 .perso {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   position: absolute;
   bottom: 20px;
   transform: translateX(-50%);
-  background-image: url("../img/GAME_JAM_-_PERSONNAGE_MOTO.svg");
+  background-image: url("../img/moto.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;
+}
+.perso .coeur {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: 66%;
+  left: 45%;
+}
+.perso .coeur > div {
+  width: 6px;
+  height: 6px;
+  background-image: url(../img/coeur.png);
+  background-size: 100%;
+}
+
+.obstacles > .gauche {
+  animation: defilement1 5s linear 1;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(../img/barriere_retro.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.checkpoint > .gauche {
+  animation: defilement1 5s linear 1;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 255, 0);
+  background-image: url(../img/checkpoint.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@keyframes defilement1 {
+  0% {
+    opacity: 0.1;
+    width: 50px;
+    height: 50px;
+    bottom: 43vh;
+    left: 45%;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+    bottom: -150px;
+    left: 30%;
+  }
+}
+.obstacles > .milieu {
+  animation: defilement2 5s linear 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(../img/rocher_3.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.checkpoint > .milieu {
+  animation: defilement2 5s linear 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 255, 0);
+  background-image: url(../img/checkpoint.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@keyframes defilement2 {
+  0% {
+    opacity: 0.1;
+    width: 50px;
+    height: 50px;
+    bottom: 43vh;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+    bottom: -150px;
+  }
+}
+.obstacles > .droite {
+  animation: defilement3 5s linear 1;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(../img/rocher_2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.checkpoint > .droite {
+  animation: defilement3 5s linear 1;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 255, 0);
+  background-image: url(../img/checkpoint.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@keyframes defilement3 {
+  0% {
+    opacity: 0.1;
+    width: 50px;
+    height: 50px;
+    bottom: 43vh;
+    left: 55%;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+    bottom: -150px;
+    left: 70%;
+  }
+}
+.popup {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 50px;
+  text-align: center;
+  padding: 20vw;
+}
+.popup > h2 {
+  margin-bottom: 50px;
+}
+
+.victoire, .defaite {
+  display: none;
+}
+
+.ombre {
+  width: 100vw;
+  height: 30vh;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/building_-_retrowave.svg);
+  z-index: 5;
 }/*# sourceMappingURL=style.css.map */
