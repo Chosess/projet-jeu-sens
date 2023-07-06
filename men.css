@@ -1,0 +1,50 @@
+.retropunk {
+    font-size: 100px;
+    font-family: 'Russo One';
+    background: linear-gradient(45deg, #ff007f, #ff8400, #ffd500, #00ff40, #007fff, #b200ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.regle{
+    color: white;
+    font-size: 20px;
+}
+
+.description{
+    color: white;
+    font-size: 20px;
+}
+
+#rules-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+#rules-popup h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+#rules-popup p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#rules-popup button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
