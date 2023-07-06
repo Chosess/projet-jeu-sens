@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Simple Jeu 2D</title>
+  <style>
+    #character {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 200px;
+      background-color: red;
+    }
+    #enemy {
+      position: absolute;
+      width:  50px;
+      height: 50px;
+      justify-content: center;
+      background-color: blue;
+    }
+  </style>
 </head>
 <body>
-    
+  <div id="character"></div>
+  <div id="enemy"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
